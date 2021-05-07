@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{name}}!{% endblock %}
+
+{% block body %}
+
+    <h3>Hello {{ name }}!</h3>
+
+    <a href="{{ path('about') }}"><u>About me!</u></a>
+    
+
+    <form method="post" action="{{ path('changename') }}">
+        <label for="newname">change your name</label>
+        <input type="text" id="newname" name="newname">
+    </form>
+
+{% endblock %}
